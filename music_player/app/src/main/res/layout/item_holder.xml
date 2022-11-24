@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/item_view"
+    android:elevation="5dp"
+    android:padding="5dp">
+
+    <ImageView
+        android:id="@+id/ivAlbumArt"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="5dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_music_24" />
+
+    <TextView
+        android:id="@+id/tvArtist"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:text="가수명"
+        app:layout_constraintStart_toEndOf="@+id/ivAlbumArt"
+        app:layout_constraintTop_toTopOf="@+id/ivAlbumArt" />
+
+    <TextView
+        android:id="@+id/tvTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:text="제목"
+        app:layout_constraintBottom_toBottomOf="@+id/ivAlbumArt"
+        app:layout_constraintStart_toEndOf="@+id/ivAlbumArt" />
+
+    <TextView
+        android:id="@+id/tvDuration"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:text="노래 길이"
+        app:layout_constraintEnd_toEndOf="@+id/ivItemLike"
+        app:layout_constraintTop_toBottomOf="@+id/ivItemLike" />
+
+    <ImageView
+        android:id="@+id/ivItemLike"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginEnd="20dp"
+        android:onClick="onClick"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/tvArtist"
+        app:srcCompat="@drawable/ic_favorite_24" />
+</androidx.constraintlayout.widget.ConstraintLayout>
